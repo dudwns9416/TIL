@@ -32,7 +32,7 @@ constructor는 생략 가능.
 * 간접적 : 다른 보조생성자로부터 위임을 받는다.
 ```kotlin
     class Person(val name:String) {
-        constructor(name:String, parent: Person) : this(name) {
+         constructor(name:String, parent: Person) : this(name) {
 
         }
         constructor() : this("홍길동",Person()){
@@ -46,3 +46,22 @@ class DontCreateMe private constructor (){
 
 }
 ```
+
+상속
+======
+Any : 코틀린의 최상위 클래스
+
+class Example1 // 암시적인 Any 상속
+
+    public open class Any {
+        public open operatior fun equals(other: Any?): Boolean
+        public open fun hashCode(): Int
+        public open fun toString(): String
+    }
+
+ 기본적으로 코틀린의 모든 class은 final이다.
+ 그래서 상속을 쓰려면 open 어노테이션이 필요하다.
+
+인터페이스
+
+추상 클래스
