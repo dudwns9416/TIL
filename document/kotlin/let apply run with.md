@@ -15,7 +15,7 @@
 ```kotlin
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 16f, resources.displayMetrics).toInt().let{
             setPadding(it, 0, it, 0)
-        }
+    }
 ```
 ## apply()
 ```kotlin
